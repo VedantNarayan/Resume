@@ -15,51 +15,49 @@
       --card:#0b1220;
       --muted:#9aa4b2;
       --accent:#6ee7b7;
-      --glass: rgba(255,255,255,0.04);
-      --glass-2: rgba(255,255,255,0.02);
+      --glass: rgba(255,255,255,0.05);
+      --glass-2: rgba(255,255,255,0.03);
       --maxw:1100px;
       color-scheme: dark;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;color:#e6eef6;background:linear-gradient(180deg,#071029 0%, #041225 100%);}
-    .wrap{max-width:var(--maxw);margin:32px auto;padding:28px;border-radius:14px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));box-shadow:0 10px 30px rgba(2,6,23,0.6);display:grid;grid-template-columns:320px 1fr;gap:28px}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;color:#e6eef6;background:linear-gradient(180deg,#071029 0%, #041225 100%);line-height:1.5}
+    .wrap{max-width:var(--maxw);margin:40px auto;padding:32px;border-radius:16px;background:linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));box-shadow:0 12px 40px rgba(2,6,23,0.7);display:grid;grid-template-columns:300px 1fr;gap:32px;align-items:flex-start}
 
-    .panel{background:var(--card);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:16px}
-    .avatar{width:100%;display:flex;align-items:center;gap:14px}
-    .avatar img{width:84px;height:84px;border-radius:12px;object-fit:cover;border:2px solid rgba(255,255,255,0.04)}
-    h1{margin:0;font-size:20px}
-    .title{color:var(--muted);font-weight:600}
-    .contact{font-size:14px;color:var(--muted);display:flex;flex-direction:column;gap:6px}
-    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--glass);font-weight:600;font-size:13px}
+    .panel{background:var(--card);border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:20px}
+    .avatar{display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px}
+    .avatar img{width:100px;height:100px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,0.08)}
+    h1{margin:0;font-size:22px}
+    .title{color:var(--muted);font-weight:500;font-size:14px}
+    .contact{font-size:14px;color:var(--muted);display:flex;flex-direction:column;gap:8px;text-align:center}
+    .pill{display:inline-block;padding:6px 12px;border-radius:999px;background:var(--glass);font-weight:600;font-size:13px;margin:0 auto}
 
-    .section-title{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:6px}
-    .skills{display:flex;flex-wrap:wrap;gap:8px}
-    .skill{padding:6px 8px;border-radius:8px;background:var(--glass-2);font-weight:600;font-size:13px}
+    .section-title{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:8px;font-weight:700}
+    .skills{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:6px}
+    .skill{padding:6px 10px;border-radius:8px;background:var(--glass-2);font-weight:600;font-size:13px}
     .socials{display:flex;flex-direction:column;gap:8px}
     .socials a{color:var(--muted);text-decoration:none;font-size:14px}
 
-    .content{background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border-radius:12px;padding:20px;min-height:300px}
-    .headline{display:flex;justify-content:space-between;align-items:center}
-    .summary{color:var(--muted);line-height:1.5;margin-top:12px}
+    .content{background:linear-gradient(180deg, rgba(255,255,255,0.015), transparent);border-radius:14px;padding:28px;min-height:300px;display:flex;flex-direction:column;gap:24px}
+    .headline{display:flex;flex-direction:column;gap:12px}
+    .headline h2{font-size:20px;margin:0}
+    .summary{color:var(--muted);line-height:1.6}
 
-    .experience{display:flex;flex-direction:column;gap:14px;margin-top:12px}
-    .job{padding:14px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));}
-    .job h3{margin:0;font-size:16px}
-    .meta{color:var(--muted);font-size:13px;margin-top:6px}
-    .bullets{margin-top:8px;color:var(--muted);font-size:14px}
+    .info-box{display:flex;justify-content:space-between;align-items:center;background:var(--glass-2);padding:12px 16px;border-radius:10px;font-size:14px}
+    .info-box .accent{color:var(--accent);font-weight:700}
 
-    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:12px}
-    .project{padding:12px;border-radius:10px;background:var(--glass)}
-    .project h4{margin:0}
+    .experience,.projects{display:flex;flex-direction:column;gap:14px}
+    .project{padding:16px;border-radius:12px;background:var(--glass);transition:transform 0.2s ease, box-shadow 0.2s ease}
+    .project:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(0,0,0,0.4)}
+    .project h4{margin:0 0 6px;font-size:15px;color:#fff}
+    .project div{color:var(--muted);font-size:14px}
 
-    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+    footer{margin-top:20px;text-align:center;color:var(--muted);font-size:13px}
 
-    @media (max-width:900px){.wrap{grid-template-columns:1fr;padding:18px} .avatar img{width:72px;height:72px} }
-
-    .accent{color:var(--accent);font-weight:700}
-    .canva-wrap{margin-top:12px;border-radius:10px;overflow:hidden;background:rgba(255,255,255,0.02);padding:8px}
-    .canva-iframe{width:100%;height:360px;border:0}
-    .download{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#4fd1c5);color:#022; font-weight:700;text-decoration:none}
+    @media (max-width:900px){
+      .wrap{grid-template-columns:1fr;padding:20px}
+      .avatar img{width:80px;height:80px}
+    }
   </style>
 </head>
 <body>
@@ -75,7 +73,7 @@
     </div>
 
     <div class="contact" id="contact">
-      <div><span class="pill" id="location">Patna, India</span></div>
+      <span class="pill" id="location">Patna, India</span>
       <div>Email: <a href="mailto:veadntnarayan13@gmail.com" id="email">veadntnarayan13@gmail.com</a></div>
       <div>Phone: <span id="phone">9264454556</span></div>
     </div>
@@ -92,7 +90,7 @@
 
     <div>
       <div class="section-title">Education</div>
-      <div style="color:var(--muted);font-weight:600;margin-top:6px" id="education">
+      <div style="color:var(--muted);font-weight:600;margin-top:6px;text-align:center" id="education">
         B.Tech CSE — Amity University Patna (2022–Present)<br>
         St. Karen's High School — 10th: 84%, 12th: 80%
       </div>
@@ -100,46 +98,40 @@
 
     <div>
       <div class="section-title">Resume (PDF)</div>
-      <div class="canva-wrap">
-        <div style="padding:18px;color:var(--muted);font-size:14px">You can find my Resume below.</div>
-      </div>
-
-      <div style="margin-top:12px;text-align:center">
-        <a id="downloadLink" class="download" href="assets/resume.pdf" download>Download Resume (PDF)</a>
+      <div style="text-align:center;margin-top:10px">
+        <a id="downloadLink" class="pill" style="background:var(--accent);color:#022;text-decoration:none;padding:10px 16px;border-radius:12px;font-weight:700" href="assets/resume.pdf" download>Download Resume (PDF)</a>
       </div>
     </div>
-
   </aside>
 
   <main class="content">
     <div class="headline">
-      <div>
-        <h2 id="headline">Aspiring Full Stack Hardware Developer & Tech Enthusiast</h2>
-        <div class="summary" id="summary">B.Tech CSE student passionate about IoT, robotics, and creative technology. Experienced in hardware development, video editing, and 3D animation.</div>
-      </div>
-      <div style="text-align:right;color:var(--muted)">
-        <div style="font-weight:700">Open to: <span class="accent" id="openTo">Internships</span></div>
-        <div style="margin-top:8px;font-size:13px">Location: <span id="remote">Patna / Remote</span></div>
-      </div>
+      <h2 id="headline">Aspiring Full Stack Hardware Developer & Tech Enthusiast</h2>
+      <div class="summary" id="summary">B.Tech CSE student passionate about IoT, robotics, and creative technology. Experienced in hardware development, video editing, and 3D animation.</div>
+    </div>
+
+    <div class="info-box">
+      <div>Open to: <span class="accent" id="openTo">Internships</span></div>
+      <div>Location: <span id="remote">Patna / Remote</span></div>
     </div>
 
     <section class="projects">
       <div class="section-title">Projects</div>
       <div class="project">
         <h4>4-Legged Spider Robot</h4>
-        <div style="color:var(--muted);font-size:14px">Mobile-app controlled robotic spider built for experimentation.</div>
+        <div>Mobile-app controlled robotic spider built for experimentation.</div>
       </div>
       <div class="project">
         <h4>Rubber Ducky</h4>
-        <div style="color:var(--muted);font-size:14px">Custom USB-based automation tool for learning cybersecurity basics.</div>
+        <div>Custom USB-based automation tool for learning cybersecurity basics.</div>
       </div>
       <div class="project">
         <h4>WRGB Planted Tank Light</h4>
-        <div style="color:var(--muted);font-size:14px">ESP8266 aquarium lighting system with sunrise/sunset fading.</div>
+        <div>ESP8266 aquarium lighting system with sunrise/sunset fading.</div>
       </div>
       <div class="project">
         <h4>IoT Automated Water Tank System</h4>
-        <div style="color:var(--muted);font-size:14px">Ultrasonic sensor water-level monitor with leak detection alerts.</div>
+        <div>Ultrasonic sensor water-level monitor with leak detection alerts.</div>
       </div>
     </section>
 
